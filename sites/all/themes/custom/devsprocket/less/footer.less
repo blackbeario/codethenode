@@ -1,14 +1,22 @@
 // Insert your styling here.
 footer {
   #block-menu-menu-links-menu {
-    li.leaf {
-      a {
-        font-size: 0;
-        color: @black;
+    .nav {
+      > li {
+        display: inline-block;
+        > a {
+          font-size: 0;
+          color: @gray-light;
 
-        // icons
-        &::before {
-          font-size: 24px;
+          // icons
+          &::before {
+            font-size: 24px;
+          }
+
+          &:hover {
+            background-color: transparent;
+            color: @black;
+          }
         }
       }
     }
