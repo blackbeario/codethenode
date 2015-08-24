@@ -1,0 +1,6 @@
+name = Drupal DDP Users
+description = Sends user data to your Meteor app.
+package = DDP
+core = 7.x
+configure = admin/config/drupal-ddp
+dependencies[] = drupal_ddp

@@ -1,0 +1,17 @@
+{
+  "name": "drupal_ddp",
+  "version": "0.1.0",
+  "description": "Connects Drupal with Meteor.js",
+  "main": "ddp.js",
+  "scripts": {
+  },
+  "dependencies": {
+    "websocket-driver": "0.x.x",
+    "faye-websocket": "0.x.x",
+    "ddp": "0.x.x",
+    "express": "4.x.x",
+    "body-parser": "1.x.x"
+  },
+  "author": "bfodeke and shrop",
+  "license": "GPL"
+}

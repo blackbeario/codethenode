@@ -1,0 +1,6 @@
+name = Drupal DDP
+description = Connect your Drupal site with your Meteor App
+package = DDP
+core = 7.x
+configure = admin/config/drupal-ddp
+dependencies[] = restws

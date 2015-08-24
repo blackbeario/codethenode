@@ -101,6 +101,8 @@ body {
     max-width: ((@container-lg - 30px));
   }
   margin-top: 20px;
+  background-color: @body-bg;
+  border: none;
   > .container {
     margin: 0;
     padding: 0;
@@ -142,13 +144,19 @@ body {
 }
 
 // Branding.
-.navbar .logo {
-  margin-right: -15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  @media @tablet {
-    margin-right: 0;
-    padding-left: 0;
+.navbar {
+  .navbar-brand {
+    display: none;
+  }
+  .logo {
+    margin-right: -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 240px;
+    @media @tablet {
+      margin-right: 0;
+      padding-left: 0;
+    }
   }
 }
 

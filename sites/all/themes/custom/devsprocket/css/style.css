@@ -8851,6 +8851,8 @@ body #admin-menu .dropdown li {
 }
 .navbar.container {
   margin-top: 20px;
+  background-color: #ffffff;
+  border: none;
 }
 @media screen and (min-width: 768px) {
   .navbar.container {
@@ -8900,10 +8902,14 @@ body #admin-menu .dropdown li {
   padding: 0;
   width: 1px;
 }
+.navbar .navbar-brand {
+  display: none;
+}
 .navbar .logo {
   margin-right: -15px;
   padding-left: 15px;
   padding-right: 15px;
+  width: 240px;
 }
 @media screen and (min-width: 768px) {
   .navbar .logo {
