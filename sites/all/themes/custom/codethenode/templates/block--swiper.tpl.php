@@ -5,9 +5,6 @@
  *
  * To more details access:
  * http://www.idangero.us/sliders/swiper
- *
- * If you want to change this base implementation, simply, create a template
- * file with the same name in the folder of your current theme.
  */
 ?>
 <?php $node_id = $variables['elements']['#node']->nid;?>
@@ -17,13 +14,21 @@
       <!--Slides-->
       <?php
       foreach ($variables['elements']['#swiper_content'] as $content):
+				$content = strip_tags($content, '<p>');
       ?>
-      <div class="swiper-slide-nid-<?php print $node_id;?> swiper-slide">
-        <?php print $content; ?>
-      </div>
+      <div class="swiper-slide-nid-<?php print $node_id;?> swiper-slide cover" style="background-image: url(<?php print $content; ?>)"></div>
       <?php endforeach; ?>
       <!--End Slides-->
     </div>
   </div>
+	<!-- Pagination -->
   <div class="pagination-nid-<?php print $node_id;?> pagination"></div>
+	<!-- Navigation buttons -->
+	<div class="swiper-button-prev"></div>
+	<div class="swiper-button-next"></div>
+	<!-- Keyboard -->
+	<div class="nav-helper hidden-xs hidden-sm">
+		<h5> Use keyboard to navigate </h5>
+		<img src="<?php print drupal_get_path('theme',$GLOBALS['theme']);?>/images/keyboard.png">
+	</div>
 </div>
