@@ -10,6 +10,7 @@
 <?php $node_id = $variables['elements']['#node']->nid;?>
 <div class="main-swiper-wrapper">
   <div class="swiper-container-nid-<?php print $node_id;?> swiper-container">
+		<div class="overlay"></div>
     <div class="swiper-wrapper">
       <!--Slides-->
       <?php
@@ -21,11 +22,9 @@
       <!--End Slides-->
     </div>
   </div>
-	<!-- Pagination -->
-  <div class="pagination-nid-<?php print $node_id;?> pagination"></div>
 	<!-- Navigation buttons -->
-	<div class="swiper-button-prev"></div>
-	<div class="swiper-button-next"></div>
+	<div class="swiper-button swiper-button-prev"></div>
+	<div class="swiper-button swiper-button-next"></div>
 	<!-- Keyboard -->
 	<div class="nav-helper hidden-xs hidden-sm">
 		<h5> Use keyboard to navigate </h5>

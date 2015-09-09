@@ -34,10 +34,3 @@ Pagination Styles
   -ms-user-select: none;
   user-select: none;
 }
-
-.swiper-slide,
-.swiper-wrapper,
-.swiper-container {
-  height: auto !important;
-  min-height: auto !important;
-}

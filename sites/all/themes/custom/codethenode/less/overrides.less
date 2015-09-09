@@ -12,7 +12,10 @@
      -moz-box-shadow: @shadow;
           box-shadow: @shadow;
 }
-
+html,body {
+  height: 100%;
+  position:relative;
+}
 html {
   &.overlay-open .navbar-fixed-top {
     z-index: 400;
@@ -31,7 +34,6 @@ html {
 body {
   // Fix horizontal scrolling on iOS devices.
   // http://drupal.org/node/1870076
-  position: relative;
   &.admin-expanded.admin-vertical.admin-nw .navbar,
   &.admin-expanded.admin-vertical.admin-sw .navbar {
     margin-left: 260px;
@@ -145,17 +147,27 @@ body {
 
 // Branding.
 .navbar {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+
   .navbar-brand {
     display: none;
   }
-  .logo {
-    margin-right: -15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 240px;
-    @media @tablet {
-      margin-right: 0;
-      padding-left: 0;
+  &.container {
+    background-color: transparent;
+    max-width: inherit;
+    width: 100%;
+
+    .logo {
+      margin-right: -15px;
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 240px;
+      @media @tablet {
+        margin-right: 0;
+        padding-left: 0;
+      }
     }
   }
 }
@@ -641,7 +653,7 @@ table {
   }
 }
 
-// Treat all links inside alert as .alert-link
+// Treat all links inside alert as .alert-link.
 .alert a {
   font-weight: @alert-link-font-weight;
 }
@@ -661,4 +673,10 @@ table {
 code {
   background-color: transparent;
   padding: 0;
+}
+
+// Typography overrides.
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: @Montserrat;
+  text-transform: uppercase;
 }

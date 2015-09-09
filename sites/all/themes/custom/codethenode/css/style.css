@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* fadeInOut */
+@import "http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Montserrat:400,700";
 @-webkit-keyframes fadeInOut {
   0% {
     opacity: 0;
@@ -3193,7 +3194,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -3295,7 +3296,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -10956,7 +10957,7 @@ button.close {
   position: absolute;
   z-index: 1030;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -11074,7 +11075,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -11714,6 +11715,11 @@ button.close {
     display: none !important;
   }
 }
+html,
+body {
+  height: 100%;
+  position: relative;
+}
 html.overlay-open .navbar-fixed-top {
   z-index: 400;
 }
@@ -11722,9 +11728,6 @@ html.js fieldset.collapsed {
 }
 html.js input.form-autocomplete {
   background-image: none;
-}
-body {
-  position: relative;
 }
 body.admin-expanded.admin-vertical.admin-nw .navbar,
 body.admin-expanded.admin-vertical.admin-sw .navbar {
@@ -11832,17 +11835,27 @@ body #admin-menu .dropdown li {
   padding: 0;
   width: 1px;
 }
+.navbar {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
 .navbar .navbar-brand {
   display: none;
 }
-.navbar .logo {
+.navbar.container {
+  background-color: transparent;
+  max-width: inherit;
+  width: 100%;
+}
+.navbar.container .logo {
   margin-right: -15px;
   padding-left: 15px;
   padding-right: 15px;
   width: 240px;
 }
 @media screen and (min-width: 768px) {
-  .navbar .logo {
+  .navbar.container .logo {
     margin-right: 0;
     padding-left: 0;
   }
@@ -12301,15 +12314,44 @@ code {
   background-color: transparent;
   padding: 0;
 }
-#hero {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: Montserrat, "Helvetica", sans-serif;
+  text-transform: uppercase;
+}
+.front .region-header,
+.front .main-swiper-wrapper,
+.front .swiper-container {
+  height: 100%;
+}
+.front #hero {
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
   /* Helper class for responsive background size */
 }
-#hero .cover {
-  height: 100% !important;
+.front #hero .overlay {
+  background-color: #000000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.front #hero .cover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12319,7 +12361,21 @@ code {
   background-attachment: scroll;
   background-color: #1a1a1a;
 }
-.nav-helper {
+.front #hero .swiper-slide {
+  float: left;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.front #hero .swiper-button {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .front #hero .swiper-button {
+    display: block;
+  }
+}
+.front .nav-helper {
   position: absolute;
   text-align: center;
   bottom: 5%;
@@ -12330,7 +12386,7 @@ code {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-.nav-helper h5 {
+.front .nav-helper h5 {
   font-size: 9px;
   line-height: 12px;
   letter-spacing: 1px;
@@ -12339,7 +12395,7 @@ code {
   text-transform: uppercase;
   font-style: normal;
 }
-.nav-helper img {
+.front .nav-helper img {
   width: 50px;
   height: 35px;
 }

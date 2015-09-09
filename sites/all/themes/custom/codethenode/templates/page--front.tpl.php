@@ -124,7 +124,7 @@
 	<div class="row">
 
 		<?php if (!empty($page['sidebar_first'])): ?>
-			<aside class="col-sm-3" role="complementary">
+			<aside class="col-sm-3 animated fadeInLeft" role="complementary">
 				<?php print render($page['sidebar_first']); ?>
 			</aside>  <!-- /#sidebar-first -->
 		<?php endif; ?>
@@ -154,13 +154,13 @@
 		</section>
 
 		<?php if (!empty($page['sidebar_second'])): ?>
-			<aside class="col-sm-3" role="complementary">
+			<aside class="col-sm- animated fadeInRight" role="complementary">
 				<?php print render($page['sidebar_second']); ?>
 			</aside>  <!-- /#sidebar-second -->
 		<?php endif; ?>
 
 	</div>
 </div>
-<footer class="footer container">
+<footer class="footer container animated fadeInUp">
 	<?php print render($page['footer']); ?>
 </footer>
