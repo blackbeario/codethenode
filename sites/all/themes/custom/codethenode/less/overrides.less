@@ -91,24 +91,35 @@ body {
   }
 }
 
-// Default navbar.
-.navbar.container {
-  @media @tablet {
-    max-width: ((@container-sm - 30px));
+// Branding.
+.navbar {
+
+  .navbar-brand {
+    display: none;
   }
-  @media @normal {
-    max-width: ((@container-md - 30px));
-  }
-  @media @wide {
-    max-width: ((@container-lg - 30px));
-  }
-  margin-top: 20px;
-  background-color: @body-bg;
-  border: none;
-  > .container {
+  &.container {
     margin: 0;
-    padding: 0;
-    width: auto;
+    max-width: inherit;
+    background-color: @white;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+
+    .logo {
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 160px;
+      @media @tablet {
+        margin-right: 0;
+        padding-left: 0;
+      }
+    }
+
+    > .container {
+      margin: 0;
+      padding: 0;
+      width: auto;
+    }
   }
 }
 
@@ -143,33 +154,6 @@ body {
   margin: 0;
   padding: 0;
   width: 1px;
-}
-
-// Branding.
-.navbar {
-  position: absolute;
-  top: 0;
-  z-index: 2;
-
-  .navbar-brand {
-    display: none;
-  }
-  &.container {
-    background-color: transparent;
-    max-width: inherit;
-    width: 100%;
-
-    .logo {
-      margin-right: -15px;
-      padding-left: 15px;
-      padding-right: 15px;
-      width: 240px;
-      @media @tablet {
-        margin-right: 0;
-        padding-left: 0;
-      }
-    }
-  }
 }
 
 // Navigation.

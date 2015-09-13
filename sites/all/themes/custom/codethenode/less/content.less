@@ -1,77 +1,36 @@
-// Swiper overrides and styles.
-.front {
-  .region-header,
-  .main-swiper-wrapper,
-  .swiper-container {
-    height: 100%;
+// ({CODE_THE_NODE}) //
+
+// Logo & transitions.
+#codenode {
+  padding: 0 1em;
+  fill: @gray;
+
+  &:hover {
+    #code #C,
+    #node #O_1_,
+    #code #D,
+    #node #E_1_ {
+      fill: @brand-danger;
+      transition: all .5s;
+    }
+    #Lt_Bracket,
+    #Rt_Bracket {
+      fill: @gray-lighter;
+      transition: all .5s;
+    }
+  }
 }
 
-  #hero {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    
-    .overlay {
-      background-color: @black;
-      opacity: 0.5;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-    }
+aside.col-sm-3 {
+  padding-top: 25px;
+}
 
-    /* Helper class for responsive background size */
-    .cover{
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: scroll;
-      background-color: #1a1a1a;
-    }
-
-    .swiper-slide {
-      float: left;
-      -webkit-box-sizing: content-box;
-      -moz-box-sizing: content-box;
-      box-sizing: content-box;
-    }
-
-    .swiper-button {
-      display: none;
-      @media @tablet {
-        display: block;
-      }
-    }
-  }
-
-  .nav-helper {
-    position: absolute;
-    text-align: center;
-    bottom: 5%;
-    left: 50%;
-    z-index: 1;
-    -webkit-animation: fadeInOut 5s;
-    animation-name: fadeInOut 5s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    h5 {
-      font-size: 9px;
-      line-height: 12px;
-      letter-spacing: 1px;
-      color: @body-bg;
-      margin-top: 5%;
-      text-transform: uppercase;
-      font-style: normal;
-    }
-    img {
-      width: 50px;
-      height: 35px;
-    }
-  }
+.node-article.node-promoted {
+  background-color: @white;
+  padding: 5px 25px;
+  margin: 30px 4%;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px @gray-light;
+  -moz-box-shadow: 0 1px 1px @gray-light;
+  box-shadow: 0 1px 1px @gray-light;
 }
