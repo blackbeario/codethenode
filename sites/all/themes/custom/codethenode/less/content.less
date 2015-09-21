@@ -1,36 +1,119 @@
 // ({CODE_THE_NODE}) //
 
 // Logo & transitions.
-#codenode {
-  padding: 0 1em;
-  fill: @gray;
+.logo {
+  padding: 8px 15px 0;
+  width: 160px;
+  @media @tablet {
+    margin-right: 0;
+    padding-left: 0;
+  }
 
-  &:hover {
-    #code #C,
-    #node #O_1_,
-    #code #D,
-    #node #E_1_ {
-      fill: @brand-danger;
-      transition: all .5s;
-    }
-    #Lt_Bracket,
-    #Rt_Bracket {
-      fill: @gray-lighter;
-      transition: all .5s;
+  #codenode {
+    padding: 0 1em;
+    fill: @sidebar;
+    transition: fill .5s ease;
+
+    &:hover {
+      #code #C,
+      #node #O_1_,
+      #code #D,
+      #node #E_1_ {
+        fill: @brand-danger;
+        transition: fill .5s ease;
+      }
+      #Lt_Bracket,
+      #Rt_Bracket {
+        fill: @gray-lighter;
+        transition: fill .5s ease;
+      }
     }
   }
 }
 
-aside.col-sm-3 {
-  padding-top: 25px;
+// Main Container
+.not-front .main-container {
+  padding-top: 2em;
 }
 
-.node-article.node-promoted {
-  background-color: @white;
-  padding: 5px 25px;
-  margin: 30px 4%;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px @gray-light;
-  -moz-box-shadow: 0 1px 1px @gray-light;
-  box-shadow: 0 1px 1px @gray-light;
+// Sidebar
+aside.col-sm-3 {
+  position: absolute;
+  top: 85px;
+  left: 0;
+  background-color: @sidebar;
+  height: 92%;
+  @media @tablet {
+    width: 375px;
+    max-width: 375px;
+  }
+
+
+  body.logged-in & {
+    top: 13.55%;
+    height: 86.45%;
+  }
+
+  .well {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  .tease {
+    transition: background-color .5s ease;
+    padding: 1% 5%;
+    margin: 2% 0;
+    border-bottom: 1px solid @sidebar-light;
+
+    h2 {
+      margin-top: 10px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+    li a {
+      color: @gray;
+    }
+
+    &:hover {
+      background-color: @sidebar-light;
+      transition: color .5s ease;
+      li a {
+        color: @gray-light;
+        &:hover {
+          color: @white;
+        }
+      }
+    }
+
+    .list-inline {
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+}
+
+// Links Menu
+#block-menu-menu-links-menu {
+  .nav {
+    > li {
+      display: inline-block;
+      > a {
+        font-size: 0;
+        color: @gray-light;
+
+        // icons
+        &::before {
+          font-size: 24px;
+        }
+
+        &:hover {
+          background-color: transparent;
+          color: @brand-danger;
+        }
+      }
+    }
+  }
 }

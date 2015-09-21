@@ -5,6 +5,7 @@
 @tablet:  ~"screen and (min-width: @{screen-sm-min})";
 @normal:  ~"screen and (min-width: @{screen-md-min})";
 @wide:    ~"screen and (min-width: @{screen-lg-min})";
+@huge:    ~"screen and (min-width: @{screen-xlg-min})";
 
 // Drop shadows.
 .box-shadow(@shadow) {
@@ -93,6 +94,7 @@ body {
 
 // Branding.
 .navbar {
+  height: 85px;
 
   .navbar-brand {
     display: none;
@@ -104,16 +106,6 @@ body {
     border: none;
     border-radius: 0;
     width: 100%;
-
-    .logo {
-      padding-left: 15px;
-      padding-right: 15px;
-      width: 160px;
-      @media @tablet {
-        margin-right: 0;
-        padding-left: 0;
-      }
-    }
 
     > .container {
       margin: 0;
@@ -143,10 +135,8 @@ body {
   z-index: 1610;
 }
 .footer {
-  margin-top: 45px;
-  padding-top: 35px;
-  padding-bottom: 36px;
-  border-top: 1px solid #E5E5E5;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 // Element invisible fix

@@ -2,8 +2,27 @@
 #hero {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 92%;
   text-align: center;
+
+  .region-header,
+  .main-swiper-wrapper,
+  .swiper-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .swiper-button {
+    display: none;
+  }
+
+  &:hover {
+    .swiper-button {
+      @media @tablet {
+        display: block;
+      }
+    }
+  }
 
   .overlay {
     background-color: @black;
@@ -32,13 +51,6 @@
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-  }
-
-  .swiper-button {
-    display: none;
-    @media @tablet {
-      display: block;
-    }
   }
 }
 

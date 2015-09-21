@@ -109,11 +109,6 @@
 	</div>
 </header>
 
-<!-- fullscreen banner -->
-<header role="banner" id="hero" class="animated fadeIn" >
-	<?php print render($page['header']); ?>
-</header>
-
 <!-- main content -->
 <div class="main-container container">
 

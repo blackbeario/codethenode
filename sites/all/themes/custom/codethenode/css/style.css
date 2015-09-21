@@ -3377,19 +3377,19 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 36px;
+  font-size: 22px;
 }
 h2,
 .h2 {
-  font-size: 30px;
+  font-size: 16px;
 }
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 16px;
 }
 h4,
 .h4 {
-  font-size: 18px;
+  font-size: 14px;
 }
 h5,
 .h5 {
@@ -11782,6 +11782,9 @@ body #admin-menu {
 body #admin-menu .dropdown li {
   line-height: normal;
 }
+.navbar {
+  height: 85px;
+}
 .navbar .navbar-brand {
   display: none;
 }
@@ -11792,17 +11795,6 @@ body #admin-menu .dropdown li {
   border: none;
   border-radius: 0;
   width: 100%;
-}
-.navbar.container .logo {
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 160px;
-}
-@media screen and (min-width: 768px) {
-  .navbar.container .logo {
-    margin-right: 0;
-    padding-left: 0;
-  }
 }
 .navbar.container > .container {
   margin: 0;
@@ -11827,10 +11819,8 @@ body #admin-menu .dropdown li {
   z-index: 1610;
 }
 .footer {
-  margin-top: 45px;
-  padding-top: 35px;
-  padding-bottom: 36px;
-  border-top: 1px solid #E5E5E5;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .element-invisible {
   margin: 0;
@@ -12306,53 +12296,120 @@ h6,
   font-family: Montserrat, "Helvetica", sans-serif;
   text-transform: uppercase;
 }
-#codenode {
+.logo {
+  padding: 8px 15px 0;
+  width: 160px;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 0;
+    padding-left: 0;
+  }
+}
+.logo #codenode {
   padding: 0 1em;
-  fill: #555555;
+  fill: #1e2124;
+  transition: fill .5s ease;
 }
-#codenode:hover #code #C,
-#codenode:hover #node #O_1_,
-#codenode:hover #code #D,
-#codenode:hover #node #E_1_ {
+.logo #codenode:hover #code #C,
+.logo #codenode:hover #node #O_1_,
+.logo #codenode:hover #code #D,
+.logo #codenode:hover #node #E_1_ {
   fill: #d9534f;
-  transition: all .5s;
+  transition: fill .5s ease;
 }
-#codenode:hover #Lt_Bracket,
-#codenode:hover #Rt_Bracket {
+.logo #codenode:hover #Lt_Bracket,
+.logo #codenode:hover #Rt_Bracket {
   fill: #eeeeee;
-  transition: all .5s;
+  transition: fill .5s ease;
+}
+.not-front .main-container {
+  padding-top: 2em;
 }
 aside.col-sm-3 {
-  padding-top: 25px;
+  position: absolute;
+  top: 85px;
+  left: 0;
+  background-color: #1e2124;
+  height: 92%;
 }
-.node-article.node-promoted {
-  background-color: #ffffff;
-  padding: 5px 25px;
-  margin: 30px 4%;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px #999999;
-  -moz-box-shadow: 0 1px 1px #999999;
-  box-shadow: 0 1px 1px #999999;
+@media screen and (min-width: 768px) {
+  aside.col-sm-3 {
+    width: 375px;
+    max-width: 375px;
+  }
 }
-footer #block-menu-menu-links-menu .nav > li {
+body.logged-in aside.col-sm-3 {
+  top: 13.55%;
+  height: 86.45%;
+}
+aside.col-sm-3 .well {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+aside.col-sm-3 .tease {
+  transition: background-color 0.5s ease;
+  padding: 1% 5%;
+  margin: 2% 0;
+  border-bottom: 1px solid #282b2f;
+}
+aside.col-sm-3 .tease h2 {
+  margin-top: 10px;
+}
+aside.col-sm-3 .tease a {
+  text-decoration: none;
+}
+aside.col-sm-3 .tease li a {
+  color: #555555;
+}
+aside.col-sm-3 .tease:hover {
+  background-color: #282b2f;
+  transition: color .5s ease;
+}
+aside.col-sm-3 .tease:hover li a {
+  color: #999999;
+}
+aside.col-sm-3 .tease:hover li a:hover {
+  color: #ffffff;
+}
+aside.col-sm-3 .tease .list-inline {
+  display: inline-block;
+  margin-left: 5px;
+}
+#block-menu-menu-links-menu .nav > li {
   display: inline-block;
 }
-footer #block-menu-menu-links-menu .nav > li > a {
+#block-menu-menu-links-menu .nav > li > a {
   font-size: 0;
   color: #999999;
 }
-footer #block-menu-menu-links-menu .nav > li > a::before {
+#block-menu-menu-links-menu .nav > li > a::before {
   font-size: 24px;
 }
-footer #block-menu-menu-links-menu .nav > li > a:hover {
+#block-menu-menu-links-menu .nav > li > a:hover {
   background-color: transparent;
   color: #d9534f;
 }
 #hero {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 92%;
   text-align: center;
+}
+#hero .region-header,
+#hero .main-swiper-wrapper,
+#hero .swiper-container {
+  height: 100%;
+  width: 100%;
+}
+#hero .swiper-button {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  #hero:hover .swiper-button {
+    display: block;
+  }
 }
 #hero .overlay {
   background-color: #000000;
@@ -12379,14 +12436,6 @@ footer #block-menu-menu-links-menu .nav > li > a:hover {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-}
-#hero .swiper-button {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  #hero .swiper-button {
-    display: block;
-  }
 }
 .nav-helper {
   position: absolute;
