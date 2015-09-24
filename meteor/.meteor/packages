@@ -1,0 +1,37 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+### Meteor Packages
+
+accounts-password
+coffeescript
+meteor-platform
+
+### Testing Packages
+
+### Atmosphere Packages
+
+fourseven:scss
+gentlenode:jrumble
+iron:router
+meteoric:ionic-sass
+meteoric:ionicons-sass
+zimme:iron-router-auth
+hb5:drupal-ddp
+dburles:collection-helpers
+reywood:publish-composite
+msavin:mongol
+meteorhacks:aggregate
+reactive-var
+momentjs:moment
+meteoric:ionic
+meteorhacks:kadira
+dispatch:reload-on-resume
+xolvio:cucumber
+velocity:console-reporter
+dburles:factory
+browser-policy
+http

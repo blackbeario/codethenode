@@ -1,0 +1,33 @@
+<template name="ArticlesView">
+
+  {{#contentFor "subheaderButtonLeft"}}
+    {{> ionNavBackButton path="Articles"}}
+  {{/contentFor}}
+
+  {{#contentFor "subheaderTitle"}}
+    {{#if Template.subscriptionsReady}}
+      <h1 class="title">{{title}}</h1>
+    {{/if}}
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      <div class="article article-view">
+        <div class="image-wrapper">
+          <img src="{{image}}" alt="{{imageAlt}}" title="{{imageAlt}}">
+        </div>
+        {{#ionBody}}
+          {{#if Template.subscriptionsReady}}
+            {{body}}
+            <em class="tags">
+              {{#each tags}}
+                {{tags}}
+              {{/each}}
+            </em>
+          {{/if}}
+        {{/ionBody}}
+      </div>
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>

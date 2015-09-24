@@ -1,0 +1,34 @@
+<template name="Sidebar">
+
+  {{#ionSideMenus}}
+    {{#ionSideMenu}}
+      <div class="sidebar">
+        <div class="bar bar-header bar-dark">
+          <h1 class="title username">{{currentUser.username}}</h1>
+        </div>
+
+        <div class="content has-header">
+          <div class="list">
+
+            <a href="{{pathFor 'Articles'}}">
+              <div class="item item-icon-right" data-ion-menu-close>
+                Articles {{> ionIcon icon="ios-arrow-right" class="assertive"}}
+              </div>
+            </a>
+
+              <a href="{{pathFor 'Profile' data=currentUser}}">
+                <div class="item item-icon-right" data-ion-menu-close>
+                  Profile {{> ionIcon icon="ios-arrow-right" class="assertive"}}
+                </div>
+              </a>
+
+            <div class="item item-icon-right item-logout" data-ion-menu-close>
+              Logout {{> ionIcon icon="log-out" class="assertive"}}
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/ionSideMenu}}
+  {{/ionSideMenus}}
+
+</template>

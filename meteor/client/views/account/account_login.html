@@ -1,0 +1,29 @@
+<template name="AccountLogin">
+
+  {{#ionView}}
+    {{#ionContent}}
+      <div class="login">
+        <div class="logo-wrapper">
+          <img alt="TTI" class="logo" src="/images/main/logo-tti.png">
+        </div>
+
+        <form action="/" class="login-form" id="login-form">
+          <div class="list list-inset">
+            <label class="item item-input">
+              <input class="username" id="login-username" placeholder="Username" type="text">
+            </label>
+
+            <label class="item item-input">
+              <input class="password" id="login-password" placeholder="Password" type="password">
+            </label>
+          </div>
+
+          <div class="padding">
+            <button class="button button-block button-assertive" type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>

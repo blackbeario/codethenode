@@ -1,0 +1,34 @@
+<template name="Articles">
+
+  {{#contentFor "subheaderButtonLeft"}}
+    {{> ionNavBackButton path="Homepage"}}
+  {{/contentFor}}
+
+  {{#contentFor "subheaderTitle"}}
+    <h1 class="title">ARTICLES</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+
+      <div class="articles">
+
+        {{> search fields=fields}}
+
+        <h4 class="assertive">Choose an article</h4>
+
+        {{#ionList}}
+          {{#each articles}}
+            {{#ionItem path="ArticlesView" iconRight=true}}
+              {{title}}
+              {{> ionIcon icon="ios-arrow-right" class="assertive"}}
+            {{/ionItem}}
+          {{/each}}
+        {{/ionList}}
+
+      </div>
+
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>

@@ -1,0 +1,45 @@
+<template name="Profile">
+  {{#contentFor "subheaderButtonLeft"}}
+    {{> ionNavBackButton path="Homepage"}}
+  {{/contentFor}}
+
+  {{#contentFor "subheaderTitle"}}
+    {{#if Template.subscriptionsReady}}
+      <h1 class="title">{{username}}</h1>
+    {{/if}}
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+
+      <div class="user-view">
+
+        {{#if Template.subscriptionsReady}}
+          <!-- <div class="avatar-wrapper"> -->
+            <!--   <img src="/images/itrack_manager/employee.png" alt="Employee Avatar" class="avatar"> -->
+            <!-- </div> -->
+          {{#ionList}}
+            <div class="user-info">
+            {{#ionItem}}
+              <div class="row">
+                <div class="col col-40"><strong>Username:</strong></div>
+                <div id="username" class="col col-60">{{user.username}}</div>
+              </div>
+            {{/ionItem}}
+
+            {{#ionItem}}
+              <div class="row">
+                <div class="col col-40"><strong>Email:</strong></div>
+                <div id="email" class="col col-60">{{user.email}}</div>
+              </div>
+              {{/ionItem}}
+            </div>
+          {{/ionList}}
+
+      {{/if}}
+    </div>
+
+  {{/ionContent}}
+{{/ionView}}
+
+</template>

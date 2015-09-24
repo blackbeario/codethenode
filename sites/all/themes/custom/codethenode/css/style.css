@@ -12377,6 +12377,28 @@ aside.col-sm-3 .tease .list-inline {
   display: inline-block;
   margin-left: 5px;
 }
+aside.col-sm-3 #block-block-1 {
+  padding: 5%;
+}
+aside.col-sm-3 #block-block-1 #meteor {
+  display: block;
+  clear: both;
+  width: 150px;
+}
+aside.col-sm-3 #block-block-1 #meteor:hover #M,
+aside.col-sm-3 #block-block-1 #meteor:hover #E1,
+aside.col-sm-3 #block-block-1 #meteor:hover #T,
+aside.col-sm-3 #block-block-1 #meteor:hover #E2,
+aside.col-sm-3 #block-block-1 #meteor:hover #R {
+  fill: #999999;
+}
+aside.col-sm-3 #block-block-1 #meteor #M,
+aside.col-sm-3 #block-block-1 #meteor #E1,
+aside.col-sm-3 #block-block-1 #meteor #T,
+aside.col-sm-3 #block-block-1 #meteor #E2,
+aside.col-sm-3 #block-block-1 #meteor #R {
+  fill: #555555;
+}
 #block-menu-menu-links-menu .nav > li {
   display: inline-block;
 }

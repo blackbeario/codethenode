@@ -48,7 +48,6 @@ aside.col-sm-3 {
     max-width: 375px;
   }
 
-
   body.logged-in & {
     top: 13.55%;
     height: 86.45%;
@@ -91,6 +90,26 @@ aside.col-sm-3 {
     .list-inline {
       display: inline-block;
       margin-left: 5px;
+    }
+  }
+
+  // Meteor svg logo block
+  #block-block-1 {
+    padding: 5%;
+    #meteor {
+      display: block;
+      clear: both;
+      width: 150px;
+
+      &:hover {
+        #M, #E1, #T, #E2, #R {
+          fill: @gray-light;
+        }
+      }
+
+      #M, #E1, #T, #E2, #R {
+        fill: @gray;
+      }
     }
   }
 }

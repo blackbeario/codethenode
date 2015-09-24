@@ -1,0 +1,19 @@
+<template name="Header">
+
+  {{#ionHeaderBar alignTitle='center'}}
+    <div class="header">
+      <button class="button button-clear pull-left" data-ion-menu-toggle="left">
+        {{#if isAndroid}}
+          {{> ionIcon icon='android-more-vertical'}}
+        {{else}}
+          {{> ionIcon icon='navicon'}}
+        {{/if}}
+      </button>
+
+      <div class="logo-wrapper">
+        <a href="{{pathFor 'Homepage'}}"><img class="logo" src="/images/main/logo-tti-small-new.png" alt="TTI"></a>
+      </div>
+    </div>
+  {{/ionHeaderBar}}
+
+</template>
