@@ -127,3 +127,14 @@
 		<?php print render($page['footer']); ?>
 	</footer>
 <?php endif; ?>
+
+<!-- Modal -->
+<div id="myModal" class="modal quick zoomIn" tabindex="-1" role="dialog">
+	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+		[ESC]
+	</button>
+
+	<div id="jquery_ajax_load_target">
+	</div>
+</div>

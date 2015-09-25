@@ -1,0 +1,9 @@
+name = Ajax Articles
+description = Returns a list of articles.
+core = 7.x
+package = Ajax
+version = "7.x-1.0"
+
+files[] = ajax_articles.module
+
+scripts[] = ajax_articles.js

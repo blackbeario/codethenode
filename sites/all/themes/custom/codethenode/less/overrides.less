@@ -127,6 +127,11 @@ body {
 // Adjust z-index of bootstrap modals
 .modal {
   z-index: 1620;
+  padding: 2em;
+  opacity: 1;
+  overflow: scroll;
+  background-color: @gray-lighter;
+  // @vertical(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%);
 }
 .modal-dialog {
   z-index: 1630;
@@ -653,4 +658,27 @@ code {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: @Montserrat;
   text-transform: uppercase;
+}
+
+// Faster animation speed.
+.quick {
+  -webkit-animation-duration: .25s;
+  animation-duration: .25s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+// Animate override.
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
