@@ -12364,8 +12364,8 @@ aside.col-sm-3 {
     max-width: 375px;
   }
 }
-body.logged-in aside.col-sm-3 {
-  top: 13.55%;
+body.logged-in.toolbar-drawer aside.col-sm-3 {
+  top: 150px;
   height: 86.45%;
 }
 aside.col-sm-3 .well {
@@ -12401,6 +12401,23 @@ aside.col-sm-3 .tease:hover li a:hover {
 aside.col-sm-3 .tease .list-inline {
   display: inline-block;
   margin-left: 5px;
+}
+aside.col-sm-3 .pager {
+  background-color: #282b2f;
+}
+aside.col-sm-3 .pager li > a {
+  background: none;
+  border: none;
+}
+aside.col-sm-3 .pager li > a:hover {
+  background-color: #282b2f;
+  transition: color .5s ease;
+}
+aside.col-sm-3 .pager li > a:hover li a {
+  color: #999999;
+}
+aside.col-sm-3 .pager li > a:hover li a:hover {
+  color: #ffffff;
 }
 aside.col-sm-3 #block-block-1 {
   padding: 5%;

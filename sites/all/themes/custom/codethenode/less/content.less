@@ -53,8 +53,8 @@ aside.col-sm-3 {
     max-width: 375px;
   }
 
-  body.logged-in & {
-    top: 13.55%;
+  body.logged-in.toolbar-drawer & {
+    top: 150px;
     height: 86.45%;
   }
 
@@ -95,6 +95,28 @@ aside.col-sm-3 {
     .list-inline {
       display: inline-block;
       margin-left: 5px;
+    }
+  }
+
+  // Views Article Block pager
+  .pager {
+    // text-align: left;
+    background-color: @sidebar-light;
+
+    li > a {
+    background: none;
+    border: none;
+
+      &:hover {
+        background-color: @sidebar-light;
+        transition: color .5s ease;
+        li a {
+          color: @gray-light;
+          &:hover {
+            color: @white;
+          }
+        }
+      }
     }
   }
 
