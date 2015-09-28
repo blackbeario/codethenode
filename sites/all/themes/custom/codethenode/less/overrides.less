@@ -91,7 +91,9 @@ body {
     }
   }
 }
-
+ img {
+   max-width: 100%;
+ }
 // Branding.
 .navbar {
   height: 85px;
@@ -127,11 +129,20 @@ body {
 // Adjust z-index of bootstrap modals
 .modal {
   z-index: 1620;
-  padding: 2em;
   opacity: 1;
   overflow: scroll;
   background-color: @gray-lighter;
   // @vertical(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%);
+  .close {
+    opacity: .5;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 999;
+  }
+  .node-article {
+    padding: 2em;
+  }
 }
 .modal-dialog {
   z-index: 1630;
