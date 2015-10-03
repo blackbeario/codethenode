@@ -16,7 +16,7 @@
         paginationClickable: true,
         pagination: '.pagination-nid-2',
         keyboardControl: true,
-        // autoplay: 6000,
+        autoplay: 6000,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         loop: true,
