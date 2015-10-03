@@ -135,6 +135,6 @@
 		[ESC]
 	</button>
 
-	<div id="jquery_ajax_load_target">
+	<div id="jq">
 	</div>
 </div>

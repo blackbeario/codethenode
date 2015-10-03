@@ -48,6 +48,7 @@ aside.col-sm-3 {
   left: 0;
   background-color: @sidebar;
   height: 92%;
+  width: 100%;
   @media @tablet {
     width: 375px;
     max-width: 375px;
@@ -202,10 +203,10 @@ aside.col-sm-3 {
 // Project pages
 .node-project {
   .project-info {
-    background: rgba(0,0,0,0.8);
+    background: @gray-darker;
     color: @gray-light;
     height: auto;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 999;
@@ -218,10 +219,23 @@ aside.col-sm-3 {
     }
   }
   .project-image {
-    height: 100vh;
+    // Settling for 50vh ruoghly gets the right height for bg images.
+    height: 50vh;
+    background-position: center top;
+    -webkit-background-size: cover;
     background-size: cover;
+    background-attachment: fixed;
+    @media @phone {
+      height: 102vh;
+    }
+    // IOS doesn't support background-attachment: fixed;
+    @media @tablet {
+      background-attachment: fixed;
+    }
+    // Temp fix until I get parallax working in modal!!
+    // #jq & {
+    //     background-attachment: inherit;
+    // }
   }
-  .slide1,.slide3 {
-    margin: 0 10em;
-  }
+
 }

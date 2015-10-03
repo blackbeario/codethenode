@@ -12369,6 +12369,7 @@ aside.col-sm-3 {
   left: 0;
   background-color: #1e2124;
   height: 92%;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   aside.col-sm-3 {
@@ -12498,10 +12499,10 @@ aside.col-sm-3 #block-block-1 #meteor #R {
   color: #d9534f;
 }
 .node-project .project-info {
-  background: rgba(0, 0, 0, 0.8);
+  background: #222222;
   color: #999999;
   height: auto;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 999;
@@ -12514,17 +12515,26 @@ aside.col-sm-3 #block-block-1 #meteor #R {
   margin-right: 10px;
 }
 .node-project .project-image {
-  height: 100vh;
+  height: 50vh;
+  background-position: center top;
+  -webkit-background-size: cover;
   background-size: cover;
+  background-attachment: fixed;
 }
-.node-project .slide1,
-.node-project .slide3 {
-  margin: 0 10em;
+@media screen and (min-width: 480px) {
+  .node-project .project-image {
+    height: 102vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node-project .project-image {
+    background-attachment: fixed;
+  }
 }
 #hero {
   position: relative;
   width: 100%;
-  height: 92%;
+  height: 100%;
   text-align: center;
 }
 #hero .region-header,

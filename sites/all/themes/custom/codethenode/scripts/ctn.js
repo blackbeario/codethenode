@@ -12,18 +12,18 @@
       /*----------------------------------------------------------------------*/
       /*  Swiper Initializations
       /*----------------------------------------------------------------------*/
-      // mySwiper = new Swiper('.swiper-container', {
-      //   paginationClickable: true,
-      //   pagination: '.pagination-nid-2',
-      //   keyboardControl: true,
-      //   // autoplay: 6000,
-      //   nextButton: '.swiper-button-next',
-      //   prevButton: '.swiper-button-prev',
-      //   loop: true,
-      //   touch: true,
-      //   preventLinks: false
-      // });
-      // $('.swiper-container').addClass('animated fadeIn');
+      mySwiper = new Swiper('.swiper-container', {
+        paginationClickable: true,
+        pagination: '.pagination-nid-2',
+        keyboardControl: true,
+        // autoplay: 6000,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        loop: true,
+        touch: true,
+        preventLinks: false
+      });
+      $('.swiper-container').addClass('animated fadeIn');
 
       /*----------------------------------------------------------------------*/
       /*  Modal
@@ -33,11 +33,13 @@
       });
 
       function closeModal() {
-        $loaded = $('#jquery_ajax_load_target .node-article');
-        $title = $('#jquery_ajax_load_target title');
+        $loaded = $('#jq .node-article, #jq .node-project');
+        $myTitle = $('#jq title');
+        $myScripts = $('#jq script');
         $('#myModal').hide();
         $loaded.remove();
-        $title.remove();
+        $myTitle.remove();
+        $myScripts.remove();
       }
 
       $('.close').click(function(){
@@ -48,6 +50,31 @@
           closeModal();
         }
       });
+
+      // WTF isn't this working on pages called in modal?
+      // Moved to inline script until figured out.
+      // // parallax test
+      // $modal = $('#myModal');
+      // $('section[data-type="background"]').each(function(){
+      //   // declare the variable to affect the defined data-type
+      //   var $scroll = $(this);
+      //
+      //   $modal.scroll(function() {
+      //     // HTML5 proves useful for helping with creating JS functions!
+      //     // also, negative value because we're scrolling upwards
+      //     var yPos = -($modal.scrollTop() / $scroll.data('speed'));
+      //
+      //     // background position
+      //     //  var coords = '50% '+ yPos + 'px';
+      //      var coords = yPos + 'px';
+      //     //  console.log(coords);
+      //
+      //     // move the background
+      //     //  $scroll.css({ backgroundPosition: coords });
+      //     $scroll.css({ 'transform':'translateY(' + coords +')' });
+      //   }); // end window scroll
+      // });  // end section function
+
     }
   }
 })(jQuery);
