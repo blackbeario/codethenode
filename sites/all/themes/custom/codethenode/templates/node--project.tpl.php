@@ -12,39 +12,45 @@
     // If mobile device simulate fixed backgrounds with translateY.
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       $('section[data-type="background"]').each(function(){
-        // Declare the variable to affect the defined data-type
+        // On scroll.
         var $scroll = $(this);
         $modal.scroll(function() {
           // Negative value because we're scrolling upwards.
           var yPos = -($modal.scrollTop() / $scroll.data('speed'));
           var coords = yPos + 'px';
-          // move the background
+          // Move the background.
           $scroll.css({ 'transform':'translateY(' + coords +')' });
         });
       });
     }
     //
     $info = $('.project-info');
+    $infoHt = $info.height() * 2 + 'px';
+
     $info.each(function(){
-      // Declare the variable to affect the defined data-type
+      // On scoll.
       var $scroll = $(this);
       $modal.scroll(function() {
         // Negative value because we're scrolling upwards.
-        var xPos = -($modal.scrollTop() / $scroll.data('speed'));
-        var xPos = xPos * 100 + 'px';
+        var xPos = $modal.scrollTop() + 'px';
+        // console.log(xPos,$infoHt);
 
-        // move the background
-        $scroll.css({ 'bottom': xPos });
+        // Add fadeout on scroll.
+        if (xPos > $infoHt) {
+          $scroll.addClass('fadeOut');
+        }
+        // Add fadeIn on scroll back to 0.
+        if (xPos == '0px') {
+          $scroll.removeClass('fadeOut').addClass('fadeIn');
+        }
       });
     });
-
-
   })(jQuery);
 </script>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <!-- project info -->
-  <div class="project-info animated fadeInLeft" data-speed="<?php echo 50;?>">
+  <div class="project-info animated">
     <h3><?php print render($content['field_project_link']); ?></h3>
     <?php print render($content['body']); ?>
   </div>

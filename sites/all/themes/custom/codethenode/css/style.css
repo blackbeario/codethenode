@@ -12533,16 +12533,11 @@ aside.col-sm-3 #block-block-1 #meteor #R {
   }
 }
 .node-project .project-image {
-  height: 50vh;
+  height: 102vh;
   background-position: center top;
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-}
-@media screen and (min-width: 480px) {
-  .node-project .project-image {
-    height: 102vh;
-  }
 }
 #hero {
   position: relative;
