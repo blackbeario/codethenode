@@ -11819,7 +11819,6 @@ img {
   background-color: #eeeeee;
 }
 .modal .close {
-  opacity: .5;
   position: absolute;
   top: 1em;
   right: 1em;
@@ -12499,20 +12498,39 @@ aside.col-sm-3 #block-block-1 #meteor #R {
   color: #d9534f;
 }
 .node-project .project-info {
-  background: #222222;
+  background: rgba(0, 0, 0, 0.75);
   color: #999999;
   height: auto;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 999;
-  padding: 1em 2em 2em;
+  padding: 0 2em 1em;
   width: 100vw;
+}
+.node-project .project-info h3 {
+  font-size: 10px;
+}
+.node-project .project-info .field-name-body {
+  display: none;
 }
 .node-project .project-info .field-name-field-project-link a::before {
   content: "\f08e";
   font-family: FontAwesome;
   margin-right: 10px;
+}
+@media screen and (min-width: 480px) {
+  .node-project .project-info {
+    padding: 1em 2em 2em;
+  }
+  .node-project .project-info h3 {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .node-project .project-info .field-name-body {
+    display: block;
+  }
 }
 .node-project .project-image {
   height: 50vh;
@@ -12526,15 +12544,10 @@ aside.col-sm-3 #block-block-1 #meteor #R {
     height: 102vh;
   }
 }
-@media screen and (min-width: 768px) {
-  .node-project .project-image {
-    background-attachment: fixed;
-  }
-}
 #hero {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 92%;
   text-align: center;
 }
 #hero .region-header,

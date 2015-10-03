@@ -203,19 +203,36 @@ aside.col-sm-3 {
 // Project pages
 .node-project {
   .project-info {
-    background: @gray-darker;
+    h3 {
+      font-size: 10px;
+    }
+    .field-name-body {
+      display: none;
+    }
+    background: rgba(0,0,0,0.75);
     color: @gray-light;
     height: auto;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     z-index: 999;
-    padding: 1em 2em 2em;
+    padding: 0 2em 1em;
     width: 100vw;
     .field-name-field-project-link a::before {
       content: "\f08e";
       font-family: FontAwesome;
       margin-right: 10px;
+    }
+    @media @phone {
+      h3 {
+        font-size: 16px;
+      }
+      padding: 1em 2em 2em;
+    }
+    @media @tablet {
+      .field-name-body {
+        display: block;
+      }
     }
   }
   .project-image {
@@ -228,14 +245,6 @@ aside.col-sm-3 {
     @media @phone {
       height: 102vh;
     }
-    // IOS doesn't support background-attachment: fixed;
-    @media @tablet {
-      background-attachment: fixed;
-    }
-    // Temp fix until I get parallax working in modal!!
-    // #jq & {
-    //     background-attachment: inherit;
-    // }
   }
 
 }

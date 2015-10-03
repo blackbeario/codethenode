@@ -8,9 +8,9 @@
 <!-- Don't load all the JS scripts with jQuery AJAX Load, use inline script. -->
 <script type="text/javascript">
   (function ($) {
+    $modal = $('#myModal');
+    // If mobile device simulate fixed backgrounds with translateY.
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      // tasks to do if it is a Mobile Device
-      $modal = $('#myModal');
       $('section[data-type="background"]').each(function(){
         // Declare the variable to affect the defined data-type
         var $scroll = $(this);
@@ -23,12 +23,28 @@
         });
       });
     }
+    //
+    $info = $('.project-info');
+    $info.each(function(){
+      // Declare the variable to affect the defined data-type
+      var $scroll = $(this);
+      $modal.scroll(function() {
+        // Negative value because we're scrolling upwards.
+        var xPos = -($modal.scrollTop() / $scroll.data('speed'));
+        var xPos = xPos * 100 + 'px';
+
+        // move the background
+        $scroll.css({ 'bottom': xPos });
+      });
+    });
+
+
   })(jQuery);
 </script>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <!-- project info -->
-  <div class="project-info animated fadeInLeft">
+  <div class="project-info animated fadeInLeft" data-speed="<?php echo 50;?>">
     <h3><?php print render($content['field_project_link']); ?></h3>
     <?php print render($content['body']); ?>
   </div>
