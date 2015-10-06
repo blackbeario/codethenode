@@ -12538,6 +12538,11 @@ aside.col-sm-3 #block-block-1 #meteor #R {
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-perspective: 1000;
 }
 #hero {
   position: relative;
