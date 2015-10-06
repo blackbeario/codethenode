@@ -37,7 +37,7 @@
 
         // Add fadeout on scroll.
         if (xPos > $infoHt) {
-          $scroll.addClass('fadeOut');
+          $scroll.removeClass('fadeIn').addClass('fadeOut');
         }
         // Add fadeIn on scroll back to 0.
         if (xPos == '0px') {

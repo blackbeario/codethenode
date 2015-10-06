@@ -236,16 +236,13 @@ aside.col-sm-3 {
     }
   }
   .project-image {
-    height: 102vh;
+    .size(100%; 102vh);
     background-position: center top;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-attachment: fixed;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    // -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
+    .background-size(cover);
+    .backface-visibility(hidden);
+    .translate3d(0; 0; 0);
+    @media @tablet {
+      background-attachment: fixed;
+    }
   }
 }
