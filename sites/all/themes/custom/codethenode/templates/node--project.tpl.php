@@ -19,7 +19,7 @@
           var yPos = -($modal.scrollTop() / $scroll.data('speed'));
           var coords = yPos + 'px';
           // Move the background.
-          $scroll.css({ 'transform':'translateY(' + coords +')' });
+          $scroll.css({ 'background-position-y':coords });
         });
       });
     }
