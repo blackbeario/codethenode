@@ -12538,11 +12538,6 @@ aside.col-sm-3 #block-block-1 #meteor #R {
   background-position: center top;
   -webkit-background-size: cover;
   background-size: cover;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 @media screen and (min-width: 768px) {
   .node-project .project-image {
