@@ -240,14 +240,16 @@ aside.col-sm-3 {
     background-position: center top;
     background-repeat: no-repeat;
     .background-size(cover);
+    .backface-visibility(hidden);
+    @media @phone-max {
+      .translate3d(0; 0; 0);
+    }
     @media @phone {
       .size(100%; 102vh);
     }
     @media @tablet {
       background-attachment: fixed;
-    }
-    &.slide_3 {
-      // transform: translateY(0px) !important;
+      .backface-visibility(visible);
     }
   }
 }
