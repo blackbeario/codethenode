@@ -236,14 +236,18 @@ aside.col-sm-3 {
     }
   }
   .project-image {
-    .size(100%; 102vh);
+    .size(100%; 52vh);
     background-position: center top;
+    background-repeat: no-repeat;
     .background-size(cover);
-    // .backface-visibility(hidden);
-    // .translate3d(0; 0; 0);
+    @media @phone {
+      .size(100%; 102vh);
+    }
     @media @tablet {
       background-attachment: fixed;
-      // .backface-visibility(visible);
+    }
+    &.slide_3 {
+      // transform: translateY(0px) !important;
     }
   }
 }

@@ -22,6 +22,7 @@
           $scroll.css({ 'transform':'translateY('+ coords +')' });
         });
       });
+      $('.project-image.slide_0').attr('data-speed','-2.5');
     }
     //
     $info = $('.project-info');
@@ -60,7 +61,7 @@
       $count = count($content['field_project_image']['#items']);
       for ($i = 0; $i < $count; $i++):
     ?>
-    <section class="project-image slide_<?php echo $i;?>" data-speed="<?php echo $i*10;?>" data-type="background" style="background-image: url('/sites/default/files/projects/<?php print render($content['field_project_image'][$i]['#item']['filename']); ?>')"></section>
+    <section class="project-image slide_<?php echo $i;?>" data-speed="<?php echo $i*-5;?>" data-type="background" style="background-image: url('/sites/default/files/projects/<?php print render($content['field_project_image'][$i]['#item']['filename']); ?>')"></section>
     <?php endfor; ?>
 
   </div>
