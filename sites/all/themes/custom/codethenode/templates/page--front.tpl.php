@@ -116,7 +116,7 @@
 
 <!-- main content -->
 <div class="main-container container">
-	<div class="menutab fa fa-bars">
+	<div class="menutab fa fa-bars" title="Toggle Menu ( m )">
 	</div>
 	<aside class="col-sm-3 animated fadeInLeft" role="complementary">
 		<?php print render($page['sidebar_first']); ?>

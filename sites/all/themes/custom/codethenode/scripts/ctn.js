@@ -15,7 +15,7 @@
       });
       // Toggle the sidemenu if '[' key is pressed.
 			$(document).on("keydown", function(e) {
-				if (e.which === 219) {
+				if (e.which === 77) {
 					toggleStuff();
 				}
 			});
