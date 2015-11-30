@@ -11,7 +11,6 @@
 <?php $node_id = $variables['elements']['#node']->nid;?>
 <div class="main-swiper-wrapper">
   <div class="swiper-container-nid-<?php print $node_id;?> swiper-container">
-		<div class="overlay"></div>
     <div class="swiper-wrapper">
       <!--Slides-->
       <?php
@@ -32,4 +31,3 @@
 		<img src="<?php print drupal_get_path('theme',$GLOBALS['theme']);?>/images/keyboard.png">
 	</div>
 </div>
-
