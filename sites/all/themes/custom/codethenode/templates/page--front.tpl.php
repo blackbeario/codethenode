@@ -116,6 +116,8 @@
 
 <!-- main content -->
 <div class="main-container container">
+	<div class="menutab fa fa-bars">
+	</div>
 	<aside class="col-sm-3 animated fadeInLeft" role="complementary">
 		<?php print render($page['sidebar_first']); ?>
 	</aside>  <!-- /#sidebar-first -->

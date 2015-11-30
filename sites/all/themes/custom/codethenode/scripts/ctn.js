@@ -5,7 +5,20 @@
       /*----------------------------------------------------------------------*/
       /*  General Scripts
       /*----------------------------------------------------------------------*/
-
+      // Toggle the visibility of the sidemenu.
+      tab = $('.menutab');
+   		function toggleStuff() {
+				$('aside,.menutab').toggleClass('visible');
+   		}
+      tab.click(function(){
+        toggleStuff();
+      });
+      // Toggle the sidemenu if '[' key is pressed.
+			$(document).on("keydown", function(e) {
+				if (e.which === 219) {
+					toggleStuff();
+				}
+			});
       // Reduce click delay on mobile devices
       // FastClick.attach(document.body);
 

@@ -12363,6 +12363,17 @@ h6,
 .not-front .main-container {
   padding-top: 2em;
 }
+.menutab {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  color: #1e2124;
+  cursor: pointer;
+  font-size: 22px;
+}
+.menutab.visible {
+  left: 385px;
+}
 aside.col-sm-3 {
   position: absolute;
   top: 85px;
@@ -12373,6 +12384,11 @@ aside.col-sm-3 {
 }
 @media screen and (min-width: 768px) {
   aside.col-sm-3 {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  aside.col-sm-3.visible {
     width: 375px;
     max-width: 375px;
   }

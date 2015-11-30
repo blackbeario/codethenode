@@ -41,6 +41,19 @@
   padding-top: 2em;
 }
 
+// Menutab
+.menutab {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  color: @sidebar;
+  cursor: pointer;
+  font-size: @font-size-h1;
+  &.visible {
+    left: 385px;
+  }
+}
+
 // Sidebar
 aside.col-sm-3 {
   position: absolute;
@@ -50,8 +63,13 @@ aside.col-sm-3 {
   height: 92%;
   width: 100%;
   @media @tablet {
-    width: 375px;
-    max-width: 375px;
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    &.visible {
+      width: 375px;
+      max-width: 375px;
+    }
   }
 
   body.logged-in.toolbar-drawer & {
